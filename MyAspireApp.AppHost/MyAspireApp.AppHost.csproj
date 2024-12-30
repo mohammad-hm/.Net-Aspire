@@ -12,10 +12,12 @@
   <ItemGroup>
     <ProjectReference Include="..\MyAspireApp.ApiService\MyAspireApp.ApiService.csproj" />
     <ProjectReference Include="..\MyAspireApp.Web\MyAspireApp.Web.csproj" />
+    <ProjectReference Include="..\RedisService\MyAspireApp.RedisService.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="8.2.2" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="9.0.0" />
   </ItemGroup>
 
 </Project>
