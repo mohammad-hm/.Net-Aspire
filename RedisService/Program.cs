@@ -1,25 +1,39 @@
+using StackExchange.Redis;
+using System.Text.Json;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.AddRedisClient("cache");
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.AddServiceDefaults();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.MapDefaultEndpoints();
+
+app.MapGet("/", async (IConnectionMultiplexer connection) =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    var database = connection.GetDatabase();
 
-app.UseHttpsRedirection();
+    var entry = new Entry();
 
-app.UseAuthorization();
+    // Add an entry to the list on each request.
+    await database.ListRightPushAsync("entries", JsonSerializer.SerializeToUtf8Bytes(entry));
 
-app.MapControllers();
+    var entries = new List<Entry>();
+    var list = await database.ListRangeAsync("entries");
+
+    foreach (var item in list)
+    {
+        entries.Add(JsonSerializer.Deserialize<Entry>((string)item!)!);
+    }
+
+    return entries;
+});
 
 app.Run();
+
+public class Entry
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+}
