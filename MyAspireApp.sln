@@ -9,11 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAspireApp.AppHost", "MyAs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAspireApp.ServiceDefaults", "MyAspireApp.ServiceDefaults\MyAspireApp.ServiceDefaults.csproj", "{FCEFA600-40B3-40E8-8159-64C17BE0CA65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAspireApp.ApiService", "MyAspireApp.ApiService\MyAspireApp.ApiService.csproj", "{FA3C7206-B3A5-4410-AC58-C2530EB91F30}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAspireApp.Web", "MyAspireApp.Web\MyAspireApp.Web.csproj", "{A34B9E53-9CC3-4955-BB2E-B896ACF172B0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspireApp.RedisService", "RedisService\MyAspireApp.RedisService.csproj", "{931B95B3-B1AB-4CD7-A0A9-39BCC0CFF636}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAspireApp.RedisService", "RedisService\MyAspireApp.RedisService.csproj", "{931B95B3-B1AB-4CD7-A0A9-39BCC0CFF636}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +25,6 @@ Global
 		{FCEFA600-40B3-40E8-8159-64C17BE0CA65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCEFA600-40B3-40E8-8159-64C17BE0CA65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCEFA600-40B3-40E8-8159-64C17BE0CA65}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA3C7206-B3A5-4410-AC58-C2530EB91F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA3C7206-B3A5-4410-AC58-C2530EB91F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA3C7206-B3A5-4410-AC58-C2530EB91F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA3C7206-B3A5-4410-AC58-C2530EB91F30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A34B9E53-9CC3-4955-BB2E-B896ACF172B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A34B9E53-9CC3-4955-BB2E-B896ACF172B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A34B9E53-9CC3-4955-BB2E-B896ACF172B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A34B9E53-9CC3-4955-BB2E-B896ACF172B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{931B95B3-B1AB-4CD7-A0A9-39BCC0CFF636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{931B95B3-B1AB-4CD7-A0A9-39BCC0CFF636}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{931B95B3-B1AB-4CD7-A0A9-39BCC0CFF636}.Release|Any CPU.ActiveCfg = Release|Any CPU
