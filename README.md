@@ -22,3 +22,9 @@ You can also add this to your AppHost project's Properties/launchSettings.json:
 cd MyAspireApp
 dotnet build
 dotnet run --project MyAspireApp.AppHost
+
+*if you want to bypass the cert, and be able to see dashboard from another server,
+ first execute these commands on .Net aspire server:
+    dotnet dev-certs https --clean 
+    dotnet dev-certs https --starter
+ then in use, portforwarding to be able to see dashboard as localhost

@@ -10,8 +10,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\MyAspireApp.ApiService\MyAspireApp.ApiService.csproj" />
-		<ProjectReference Include="..\MyAspireApp.Web\MyAspireApp.Web.csproj" />
 		<ProjectReference Include="..\RedisService\MyAspireApp.RedisService.csproj" />
 	</ItemGroup>
 
